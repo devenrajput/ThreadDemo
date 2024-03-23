@@ -1,6 +1,7 @@
 package ThreadDemo;
 
-class Table{
+class Table //Table class
+{
     synchronized void printTable(int x){
         for(int i=1;i<=10;i++){
             System.out.println(i*x);
@@ -8,7 +9,8 @@ class Table{
     }
 }
 
-class FirstThread extends Thread{
+class FirstThread extends Thread //Thread class
+{
     Table t;
     public FirstThread(Table t) {
         this.t=t;
@@ -19,7 +21,8 @@ class FirstThread extends Thread{
     }
 }
 
-class SecondThread extends Thread{
+class SecondThread extends Thread //Thread class
+{
     Table t;
     public SecondThread(Table t) {
         this.t=t;
@@ -30,7 +33,8 @@ class SecondThread extends Thread{
     }
 }
 
-public class ThreadTest{
+public class ThreadTest //Main class
+{
     public static void main(String args[]){
 
         Table t = new Table();
